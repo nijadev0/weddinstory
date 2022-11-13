@@ -5,11 +5,26 @@
 	import Para from '../atoms/Para.svelte';
 
 	import Mail from '$lib/icons/Mail.svelte';
+	import Circle from '$lib/icons/Circle.svelte';
 
 	export let data: any;
 </script>
 
-<footer class="footer bg-[url('circle-footer.svg')] bg-cover bg-no-repeat">
+<footer class="footer">
+	<Circle
+		class="absolute -top-[50%] -right-[105%] z-10 h-[676px] w-[681px] stroke-white/30"
+		footer
+	/>
+
+	<Circle
+		class="absolute -bottom-[6%] -right-[80%] z-10 h-[449px] w-[446px] stroke-white/30"
+		footer
+	/>
+
+	<Circle
+		class="absolute -bottom-[50%] -left-[125%] z-10 h-[676px] w-[681px] stroke-white/30"
+		footer
+	/>
 	<div class="heading">
 		<Heading variant="secondary" size="base" color="white">
 			Buat undanganmu sekarang dengan paket terbaik dari kami!
