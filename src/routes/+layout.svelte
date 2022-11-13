@@ -12,7 +12,7 @@
 <Header />
 
 <div class="contact-now">
-	<Whatsapp class="h-8 w-8" />
+	<Whatsapp class="h-full max-h-8 w-full max-w-[2rem]" />
 </div>
 
 <main class="main">
@@ -27,6 +27,6 @@
 	}
 
 	.contact-now {
-		@apply fixed bottom-5 right-5 z-20 h-max w-max rounded-full bg-white p-2.5 shadow-iconWhatsapp;
+		@apply fixed bottom-10 right-5 z-20 h-max w-max rounded-full bg-white p-2.5 shadow-iconWhatsapp;
 	}
 </style>
