@@ -7,11 +7,14 @@
 
 	import 'swiper/css';
 	import 'swiper/css/navigation';
+	import StarRect from '$lib/icons/StarRect.svelte';
 
 	export let data: any;
 </script>
 
 <section class="testimony">
+	<StarRect class="absolute top-5 -left-3 z-10" />
+
 	<div id="prev" class="icon left">
 		<Arrow class="h-[42px] w-[42px] xl:h-12 xl:w-12" />
 	</div>
