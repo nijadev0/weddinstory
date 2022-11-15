@@ -3,13 +3,15 @@
 	import 'swiper/css';
 
 	import Title from '../moleculs/Title.svelte';
+	import { append } from 'svelte/internal';
 </script>
 
-<section class="benefit flex flex-col items-center py-12">
+<section class="benefit">
 	<Title
 		variant="terniary"
 		heading="Lebih dari 100+ Tema Eksklusif"
 		description="Pilih berbagai tema eksklusif dari kami untuk undanganmu"
+		benefit
 	/>
 
 	<Swiper
@@ -23,12 +25,24 @@
 		}}
 	>
 		{#each [1, 2, 3] as carousel}
-			<SwiperSlide class="h-full w-full max-w-[240px] sm:min-w-[240px] sm:max-w-[393px]">
-				<img
-					src="theme-illustration-{carousel}.png"
-					alt="Collection Theme Illustration {carousel}"
-				/>
-			</SwiperSlide>
+			<div class="swiper-slide">
+				<SwiperSlide>
+					<img
+						src="theme-illustration-{carousel}.png"
+						alt="Collection Theme Illustration {carousel}"
+					/>
+				</SwiperSlide>
+			</div>
 		{/each}
 	</Swiper>
 </section>
+
+<style lang="postcss">
+	.benefit {
+		@apply flex flex-col items-center py-12;
+	}
+
+	.swiper-slide {
+		@apply h-full w-full max-w-[240px] pr-5 sm:min-w-[240px] sm:max-w-[393px] xl:pr-0;
+	}
+</style>

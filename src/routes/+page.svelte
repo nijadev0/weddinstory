@@ -25,7 +25,9 @@
 
 <div transition:slide class="relative flex justify-end pt-2 pb-14">
 	<div
-		class="contact-now fixed bottom-16 right-12 {currentScrollY > 300 ? 'xl:fixed' : 'xl:static'}"
+		class="contact-now fixed bottom-12 right-5 xl:bottom-16 xl:right-12 {currentScrollY > 300
+			? 'xl:fixed'
+			: 'xl:static'}"
 	>
 		<Whatsapp class="h-full max-h-8 w-full max-w-[2rem] ease-out xl:max-h-10 xl:max-w-[40px]" />
 		<span class="hidden whitespace-nowrap text-lg font-medium text-[#4DCB5B] xl:block">

@@ -9,6 +9,7 @@
 	export let hero: boolean = false;
 	export let guide: boolean = false;
 	export let feature: boolean = false;
+	export let benefit: boolean = false;
 
 	export let heading: string = '';
 	export let description: string = '';
@@ -21,24 +22,26 @@
 
 	<Heading
 		type={hero ? 'main' : 'base'}
-		class="{(hero && 'mb-5 xl:mb-[44px]') || (guide && 'mb-7') || 'mb-5 xl:mb-9'} {variant ===
-			'terniary' && 'text-center'}"
+		class="{(hero && 'mb-5 xl:mb-[44px]') ||
+			(guide && 'mb-5 xl:mb-7') ||
+			'mb-5 xl:mb-9'} {variant === 'terniary' && 'text-center'}"
 	>
 		{heading}
 	</Heading>
 	<Para
 		size="small"
 		{hero}
-		class="mb-5 max-w-[605px] {(hero && 'mb-[60px]') ||
-			(guide && 'mb-5 xl:mb-11') ||
-			(feature && 'mb-[72px]') ||
+		class="mb-5 max-w-[605px] {(hero && 'mb-8 xl:mb-[60px]') ||
+			(guide && 'mb-0 xl:mb-11') ||
+			(feature && 'mb-0 xl:mb-[72px]') ||
+			(benefit && 'mb-3 xl:mb-9') ||
 			'mb-10'} {variant === 'terniary' && 'text-center'}"
 	>
 		{description}
 	</Para>
 
 	{#if variant === 'terniary'}
-		<a href="https://instagram.com/weddinstory" class="mb-12 flex items-center gap-2">
+		<a href="https://instagram.com/weddinstory" class="mb-6 flex items-center gap-2 xl:mb-12">
 			<span class="btn icon span"> Lihat Semua </span>
 			<ArrowBtn />
 		</a>

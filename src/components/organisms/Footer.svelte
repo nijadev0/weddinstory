@@ -64,7 +64,7 @@
 
 <style lang="postcss">
 	.footer {
-		@apply relative w-full bg-primary px-5 text-white;
+		@apply relative w-full bg-primary text-white;
 	}
 
 	.footer .wrapper {
