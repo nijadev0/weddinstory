@@ -1,13 +1,14 @@
 <script lang="ts">
 	import Heading from '../../components/atoms/Heading.svelte';
 	import Para from '../../components/atoms/Para.svelte';
-	import Button from '../atoms/Button.svelte';
 
 	import ArrowBtn from '$lib/icons/ArrowBtn.svelte';
 
-	export let type: string | 'hero' | 'other' = 'other';
 	export let variant: string | 'primary' | 'secondary' | 'terniary' = 'primary';
 	export let position: string | 'center' = '';
+	export let hero: boolean = false;
+	export let guide: boolean = false;
+	export let feature: boolean = false;
 
 	export let heading: string = '';
 	export let description: string = '';
@@ -19,20 +20,28 @@
 	{/if}
 
 	<Heading
-		type={type === 'hero' ? 'main' : 'base'}
-		class="mb-5 {variant === 'terniary' && 'text-center'}"
+		type={hero ? 'main' : 'base'}
+		class="{(hero && 'mb-5 xl:mb-[44px]') || (guide && 'mb-7') || 'mb-5 xl:mb-9'} {variant ===
+			'terniary' && 'text-center'}"
 	>
 		{heading}
 	</Heading>
-	<Para size="small" class="mb-5 {variant === 'terniary' && 'text-center'}">
+	<Para
+		size="small"
+		{hero}
+		class="mb-5 max-w-[605px] {(hero && 'mb-[60px]') ||
+			(guide && 'mb-5 xl:mb-11') ||
+			(feature && 'mb-[72px]') ||
+			'mb-10'} {variant === 'terniary' && 'text-center'}"
+	>
 		{description}
 	</Para>
 
 	{#if variant === 'terniary'}
-		<Button type="link" icon href="https://instagram.com/weddinstory" class="mb-6">
+		<a href="https://instagram.com/weddinstory" class="mb-12 flex items-center gap-2">
 			<span class="btn icon span"> Lihat Semua </span>
 			<ArrowBtn />
-		</Button>
+		</a>
 	{/if}
 </div>
 
@@ -55,6 +64,6 @@
 	}
 
 	.btn.icon.span {
-		@apply font-medium leading-[28px] text-primary;
+		@apply text-sm font-medium leading-[28px] text-primary xl:text-xl;
 	}
 </style>

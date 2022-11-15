@@ -2,6 +2,7 @@
 	import Title from '../moleculs/Title.svelte';
 
 	import Circle from '$lib/icons/Circle.svelte';
+	import ArrowDown from '$lib/icons/ArrowDown.svelte';
 
 	export let heading: string = '';
 	export let description: string = '';
@@ -9,13 +10,19 @@
 	export let index: number = 0;
 </script>
 
-<section class="feature">
+<section class="feature {index !== 1 && 'reverse'}">
 	<Circle
-		class="absolute {index === 1 ? '-left-[50%] -top-32' : '-right-[50%] -top-20'} z-0 opacity-80"
+		class="absolute xl:h-[676px] xl:w-[681px] {index === 1
+			? '-left-[32rem] -top-40'
+			: '-right-[32rem] -top-96'} z-0 opacity-80"
 	/>
 
 	<div class="text">
-		<Title variant="secondary" {heading} {description} />
+		<Title variant="secondary" {heading} {description} feature />
+
+		<div class="icon arrow-down">
+			<ArrowDown />
+		</div>
 	</div>
 
 	<div class="photo">
@@ -25,18 +32,26 @@
 
 <style lang="postcss">
 	.feature {
-		@apply relative flex flex-col items-center gap-5 pt-12 pb-[46px];
+		@apply relative flex flex-col items-center gap-5 pt-12 pb-[46px] xl:flex-row xl:items-center xl:gap-[75px];
+	}
+
+	.feature.reverse {
+		@apply xl:flex-row-reverse;
 	}
 
 	.text {
-		@apply z-10;
+		@apply z-10 max-w-[528px];
 	}
 
 	.photo {
-		@apply relative z-10 h-full w-full min-w-[352px];
+		@apply relative z-10 h-full w-full min-w-[352px] xl:max-w-[605px];
 	}
 
 	.image {
 		@apply h-full w-full object-cover;
+	}
+
+	.icon.arrow-down {
+		@apply hidden xl:block;
 	}
 </style>

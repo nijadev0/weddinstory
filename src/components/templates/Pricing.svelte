@@ -51,7 +51,7 @@
 
 <style lang="postcss">
 	.pricing {
-		@apply w-full py-12;
+		@apply w-full py-12 xl:pb-[180px];
 	}
 
 	.heading-wrapper {
@@ -59,6 +59,6 @@
 	}
 
 	.card-wrapper {
-		@apply flex w-full flex-col items-center gap-5;
+		@apply flex w-full flex-col items-center gap-5 xl:flex-row xl:gap-[30px];
 	}
 </style>

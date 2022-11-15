@@ -1,7 +1,8 @@
 <script lang="ts">
-	import Heading from '../atoms/Heading.svelte';
-	import Para from '../atoms/Para.svelte';
+	import Trililili from '$lib/icons/Trililili.svelte';
+	import Button from '../atoms/Button.svelte';
 	import Card from '../moleculs/Card.svelte';
+	import Title from '../moleculs/Title.svelte';
 
 	interface Guide {
 		icon?: string;
@@ -13,22 +14,27 @@
 </script>
 
 <section class="guide">
-	<Heading class="mb-5">Cara Pemesanan</Heading>
-	<Para class="mb-5">Hanya 3 langkah untuk membuat undangmu</Para>
+	<div class="relative flex flex-col items-start">
+		<Trililili class="absolute top-10 left-32 hidden xl:block" />
+		<Title guide heading="Cara Pemesanan" description="Hanya 3 langkah untuk membuat undangmu" />
+		<Button variant="primary" class="hidden w-full px-10 xl:block">Pesan Sekarang</Button>
+	</div>
 
 	<div class="wrap">
 		{#each data as { icon, heading, description }, index}
 			<Card {icon} {heading} {description} {index} />
 		{/each}
 	</div>
+
+	<Button variant="primary" class="block w-full px-10 xl:hidden">Pesan Sekarang</Button>
 </section>
 
 <style lang="postcss">
 	.guide {
-		@apply py-12;
+		@apply relative flex flex-col items-start gap-5 py-12 xl:flex-row xl:gap-[50px] xl:pt-[180px] xl:pb-[132px];
 	}
 
 	.wrap {
-		@apply flex flex-col items-start gap-10;
+		@apply mb-6 flex flex-col items-start gap-10 xl:mb-0 xl:flex-row xl:gap-[30px];
 	}
 </style>

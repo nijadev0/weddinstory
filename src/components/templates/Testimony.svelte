@@ -13,7 +13,8 @@
 </script>
 
 <section class="testimony">
-	<StarRect class="absolute top-5 -left-3 z-10" />
+	<StarRect class="absolute -top-3 -left-3 z-10 xl:-top-3" />
+	<StarRect class="absolute -bottom-3 -right-3 z-10 xl:-bottom-3" />
 
 	<div id="prev" class="icon left">
 		<Arrow class="h-[42px] w-[42px] xl:h-12 xl:w-12" />
@@ -22,6 +23,12 @@
 	<Swiper
 		modules={[Navigation]}
 		slidesPerView={1}
+		breakpoints={{
+			1280: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			}
+		}}
 		navigation={{ prevEl: '#prev', nextEl: '#next' }}
 	>
 		{#each data as { thumbnail, couples, testimony, rate }}
@@ -38,7 +45,7 @@
 
 <style lang="postcss">
 	.testimony {
-		@apply relative min-h-[370px] rounded-[10px] py-8;
+		@apply relative z-10 flex min-h-[370px]  items-center justify-center rounded-[10px] bg-[#f9f9f9] py-0 xl:min-h-[290px] xl:px-14 xl:pt-11 xl:pb-2;
 	}
 
 	.icon {

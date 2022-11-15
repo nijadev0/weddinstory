@@ -13,14 +13,14 @@
 		<slot />
 	</button>
 {:else}
-	<a class="btn {icon && 'icon'} {className}" {href}>
+	<a {href} class="btn {icon && 'icon'} {variant} {className}">
 		<slot />
 	</a>
 {/if}
 
 <style lang="postcss">
 	.btn {
-		@apply rounded-full py-[15px] text-center text-sm font-medium;
+		@apply rounded-full py-[15px] text-center text-sm font-medium xl:py-5 xl:text-xl;
 	}
 
 	.btn.primary {

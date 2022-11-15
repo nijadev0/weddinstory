@@ -15,26 +15,28 @@
 		<img class="photo" src={thumbnail} alt={thumbnail} />
 	</div>
 
-	<Heading variant="secondary" class="mb-3">{couples}</Heading>
+	<div class="text">
+		<Heading variant="secondary" class="mb-3" testimony>{couples}</Heading>
 
-	<Para variant="secondary" class="mb-3">
-		“{testimony}”
-	</Para>
+		<Para variant="secondary" class="mb-3">
+			“{testimony}”
+		</Para>
 
-	<div class="rating">
-		{#each [...Array(rate)] as star}
-			<Star />
-		{/each}
+		<div class="rating">
+			{#each [...Array(rate)] as star}
+				<Star />
+			{/each}
+		</div>
 	</div>
 </div>
 
 <style lang="postcss">
 	.carousel {
-		@apply h-full w-full shrink-0 rounded-[10px] bg-[#f9f9f9] p-5;
+		@apply flex h-full w-full shrink-0 flex-col items-start rounded-[10px] bg-[#f9f9f9] p-5 xl:flex-row xl:gap-5 xl:p-0;
 	}
 
 	.thumbnail {
-		@apply relative mb-6 h-40 w-full rounded-md bg-zinc-100 bg-cover bg-center bg-no-repeat shadow-carousel;
+		@apply relative mb-6 h-40 w-full rounded-md bg-zinc-100 bg-cover bg-center bg-no-repeat shadow-carousel xl:max-h-40 xl:max-w-[106px];
 	}
 
 	.photo {

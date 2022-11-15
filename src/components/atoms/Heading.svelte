@@ -3,13 +3,14 @@
 	export let variant: string | 'large' | 'primary' | 'secondary' = 'primary';
 	export let size: string | 'large' | 'base' | 'small' = 'base';
 	export let color: string | 'black' | 'blackPricing' | 'white' = 'black';
+	export let testimony: boolean = false;
 
 	let className: string = '';
 	export { className as class };
 </script>
 
 {#if type === 'main'}
-	<h1 class="heading {variant} {className}">
+	<h1 class="heading {variant} {size} {type} {className}">
 		<slot />
 	</h1>
 {:else if type === 'tagline'}
@@ -17,7 +18,7 @@
 		<slot />
 	</h5>
 {:else}
-	<h3 class="heading {variant} {size} {color} {className}">
+	<h3 class="heading {variant} {size} {testimony ? 'testimony' : ''} {color} {className}">
 		<slot />
 	</h3>
 {/if}
@@ -32,7 +33,11 @@
 	}
 
 	.heading.primary.base {
-		@apply text-[26px];
+		@apply text-[26px] xl:text-[52px] xl:leading-[1.46];
+	}
+
+	.heading.primary.main {
+		@apply text-[26px] leading-[1.7] xl:text-[68px];
 	}
 
 	.heading.primary.small {
@@ -64,14 +69,18 @@
 	}
 
 	.heading.secondary.base {
-		@apply text-[26px];
+		@apply text-[26px] leading-[1.5] xl:text-[50px];
+	}
+
+	.heading.secondary.base.testimony {
+		@apply text-xl xl:text-3xl;
 	}
 
 	.heading.secondary.small {
-		@apply text-xl;
+		@apply text-xl xl:text-3xl;
 	}
 
 	.tagline {
-		@apply font-dmSans text-base text-primary;
+		@apply font-dmSans text-base text-primary xl:text-xl;
 	}
 </style>

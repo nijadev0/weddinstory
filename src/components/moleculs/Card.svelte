@@ -25,7 +25,12 @@
 		{/if}
 		<div class="heading">
 			<Heading variant="primary" size="small" class="mb-5 opacity-80">Paket {heading}</Heading>
-			<Heading variant="secondary" size="large" color={isBest ? 'orange' : 'blackPricing'}>
+			<Heading
+				variant="secondary"
+				size="large"
+				color={isBest ? 'orange' : 'blackPricing'}
+				class="font-medium"
+			>
 				Rp. {numberWithCommas(price)}
 			</Heading>
 		</div>
@@ -43,8 +48,12 @@
 			{/each}
 		</div>
 
-		<div class="cta w-full">
-			<Button type="button" class="w-full" variant={isBest ? 'primary' : 'secondary'}>
+		<div class="cta flex w-full items-center justify-center">
+			<Button
+				type="button"
+				class="w-full px-10 xl:w-max"
+				variant={isBest ? 'primary' : 'secondary'}
+			>
 				Pesan sekarang
 			</Button>
 		</div>
@@ -58,7 +67,7 @@
 		<div class="text">
 			<div class="heading">
 				<Heading variant="secondary" size="small" class="font-medium">{heading}</Heading>
-				<span class="index">{index + 1}</span>
+				<span class="index">0{index + 1}</span>
 			</div>
 			<Para size="base">{description}</Para>
 		</div>
@@ -67,7 +76,7 @@
 
 <style lang="postcss">
 	.card {
-		@apply flex flex-row items-start gap-5;
+		@apply flex flex-row items-start gap-5 xl:flex-col xl:gap-6;
 	}
 
 	.card .text {
@@ -79,15 +88,11 @@
 	}
 
 	.card .text .heading .index {
-		@apply font-dmSans text-base text-[#CDCDCD];
+		@apply font-dmSans text-base font-normal text-[#CDCDCD] xl:text-xl xl:text-[#252324];
 	}
 
 	.card-pricing {
-		@apply relative flex w-full flex-col items-start gap-5 rounded-[10px] bg-[#F9F9F9] p-6;
-	}
-
-	.card-pricing .heading {
-		@apply mb-6;
+		@apply relative flex w-full flex-col items-start gap-5 rounded-[10px] bg-[#F9F9F9] p-6 xl:gap-8 xl:rounded-[20px] xl:p-8;
 	}
 
 	.card-pricing .list-advantage {
@@ -99,7 +104,7 @@
 	}
 
 	.card-pricing .advantage .desc {
-		@apply text-base leading-[1.5] text-[#121212]/60;
+		@apply text-base leading-[1.5] text-[#121212]/60 xl:text-xl;
 	}
 
 	.strike {
