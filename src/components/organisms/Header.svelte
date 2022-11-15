@@ -59,7 +59,7 @@
 
 <style lang="postcss">
 	.header {
-		@apply container relative flex w-full max-w-screen-2xl items-center justify-between pt-12 pb-5 xl:py-12;
+		@apply container relative flex w-full max-w-screen-sm items-center justify-between pt-12 pb-5 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xl:py-12 2xl:max-w-screen-2xl;
 	}
 
 	.burger {
