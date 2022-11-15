@@ -67,6 +67,6 @@
 	}
 
 	.features {
-		@apply relative flex flex-col items-start;
+		@apply relative flex w-full flex-col items-center;
 	}
 </style>

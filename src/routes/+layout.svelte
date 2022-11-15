@@ -18,6 +18,6 @@
 
 <style lang="postcss">
 	.main {
-		@apply container relative max-w-screen-2xl;
+		@apply container relative mx-auto max-w-screen-2xl;
 	}
 </style>

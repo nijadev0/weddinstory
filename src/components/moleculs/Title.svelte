@@ -22,7 +22,7 @@
 
 	<Heading
 		type={hero ? 'main' : 'base'}
-		class="{(hero && 'mb-5 xl:mb-[44px]') ||
+		class="{(hero && 'mb-5 xl:mb-[44px] max-w-[605px]') ||
 			(guide && 'mb-5 xl:mb-7') ||
 			'mb-5 xl:mb-9'} {variant === 'terniary' && 'text-center'}"
 	>
