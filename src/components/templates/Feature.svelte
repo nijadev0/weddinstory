@@ -32,7 +32,7 @@
 
 <style lang="postcss">
 	.feature {
-		@apply relative my-10 flex flex-col items-center gap-5 py-12 xl:flex-row xl:items-center xl:gap-[75px];
+		@apply relative my-0 flex flex-col items-center gap-5 py-10 xl:my-10 xl:flex-row xl:items-center xl:gap-[75px];
 	}
 
 	.feature.reverse {
