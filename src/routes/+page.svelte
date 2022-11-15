@@ -23,7 +23,7 @@
 
 <Hero />
 
-<div transition:slide class="relative flex justify-end pt-2 pb-14">
+<div transition:slide class="relative flex justify-end pb-8 xl:pt-2 xl:pb-14">
 	<div
 		class="contact-now fixed bottom-12 right-5 xl:bottom-16 xl:right-12 {currentScrollY > 300
 			? 'xl:fixed'
