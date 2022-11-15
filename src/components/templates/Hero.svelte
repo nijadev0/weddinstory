@@ -19,7 +19,9 @@
 			description="Dengan E-Invitation lebih mudah mengundang siapapun dimanapun dengan 3 ketukan"
 			hero
 		/>
-		<Button type="button" class="w-full px-14 xl:w-max">Buat Undangan</Button>
+		<Button type="link" href="https://wa.me/6281227182500" class="w-full px-14 xl:w-max">
+			Buat Undangan
+		</Button>
 	</div>
 
 	<Tralalala class="absolute bottom-[10rem] left-[20rem] hidden xl:block" />

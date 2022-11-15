@@ -51,7 +51,7 @@
 
 <style lang="postcss">
 	.pricing {
-		@apply w-full py-12 xl:pb-[180px];
+		@apply relative z-30 w-full py-12 xl:pb-[180px];
 	}
 
 	.heading-wrapper {

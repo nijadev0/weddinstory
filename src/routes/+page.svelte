@@ -25,10 +25,12 @@
 <Hero />
 
 <div transition:slide class="contact">
-	<div class="contact-wrapper {currentScrollY > 300 ? 'xl:fixed' : 'xl:static'}">
-		<Whatsapp class="h-full max-h-8 w-full max-w-[2rem] ease-out xl:max-h-10 xl:max-w-[40px]" />
-		<span class="text"> WhatsApp Kami </span>
-	</div>
+	<a href="https://wa.me/6281227182500">
+		<div class="contact-wrapper {currentScrollY > 300 ? 'xl:fixed' : 'xl:static'}">
+			<Whatsapp class="h-full max-h-8 w-full max-w-[2rem] ease-out xl:max-h-10 xl:max-w-[40px]" />
+			<span class="text"> WhatsApp Kami </span>
+		</div>
+	</a>
 </div>
 
 <Testimony data={data.carousel} />
@@ -51,7 +53,7 @@
 	}
 
 	.contact-wrapper {
-		@apply fixed bottom-12 right-5 z-20 
+		@apply fixed bottom-12 right-5 z-50
 		
 		h-max w-max rounded-full bg-white p-2.5 shadow-iconWhatsapp 
 		

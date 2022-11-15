@@ -17,7 +17,9 @@
 	<div class="relative flex flex-col items-start">
 		<Trililili class="absolute top-10 left-32 hidden xl:block" />
 		<Title guide heading="Cara Pemesanan" description="Hanya 3 langkah untuk membuat undangmu" />
-		<Button variant="primary" class="hidden w-full px-10 xl:block">Pesan Sekarang</Button>
+		<Button href="https://wa.me/6281227182500" variant="primary" class="hidden px-10 xl:block">
+			Pesan Sekarang
+		</Button>
 	</div>
 
 	<div class="wrap">
@@ -26,7 +28,9 @@
 		{/each}
 	</div>
 
-	<Button variant="primary" class="block w-full px-10 xl:hidden">Pesan Sekarang</Button>
+	<Button variant="primary" href="https://wa.me/6281227182500" class="block w-full px-10 xl:hidden">
+		Pesan Sekarang
+	</Button>
 </section>
 
 <style lang="postcss">

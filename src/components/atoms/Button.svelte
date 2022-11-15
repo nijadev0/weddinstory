@@ -24,11 +24,11 @@
 	}
 
 	.btn.primary {
-		@apply bg-primary text-white;
+		@apply border border-transparent bg-primary text-white transition-all duration-500 ease-in-out hover:border hover:border-primary hover:bg-white hover:text-primary;
 	}
 
 	.btn.secondary {
-		@apply border border-primary bg-transparent text-primary;
+		@apply border border-primary bg-transparent text-primary transition-all duration-500 ease-in-out hover:border hover:border-transparent hover:bg-primary hover:text-white;
 	}
 
 	.btn.icon {

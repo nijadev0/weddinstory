@@ -50,7 +50,7 @@
 
 		<div class="cta flex w-full items-center justify-center">
 			<Button
-				type="button"
+				href="https://wa.me/6281227182500"
 				class="w-full px-10 xl:w-max"
 				variant={isBest ? 'primary' : 'secondary'}
 			>
