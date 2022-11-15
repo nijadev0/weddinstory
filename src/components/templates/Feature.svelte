@@ -12,9 +12,9 @@
 
 <section class="feature {index !== 1 && 'reverse'}">
 	<Circle
-		class="absolute xl:h-[676px] xl:w-[681px] {index === 1
-			? '-left-[32rem] -top-40'
-			: '-right-[32rem] -top-96'} z-0 opacity-80"
+		class="absolute z-0 xl:h-[676px] xl:w-[681px] {index === 1
+			? '-top-36 -left-40 xl:-top-40 xl:-left-[32rem]'
+			: '-top-0 -right-40 xl:-top-96 xl:-right-[32rem]'}"
 	/>
 
 	<div class="text">
@@ -44,7 +44,7 @@
 	}
 
 	.photo {
-		@apply relative z-10 h-full w-full min-w-[352px] xl:max-w-[605px];
+		@apply relative z-10 h-full w-full xl:max-w-[605px];
 	}
 
 	.image {

@@ -9,7 +9,9 @@
 
 <!-- Hero -->
 <section class="hero">
-	<Circle class="absolute -top-[36rem] -left-80 hidden xl:block xl:h-[603px] xl:w-[608px]" />
+	<Circle
+		class="absolute -top-64 -left-40 z-0 h-[321px] w-[324px] xl:-top-[36rem] xl:-left-80 xl:block xl:h-[603px] xl:w-[608px]"
+	/>
 
 	<div class="text">
 		<Title

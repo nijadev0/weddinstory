@@ -59,7 +59,7 @@
 
 <style lang="postcss">
 	.header {
-		@apply container relative mx-auto flex w-full max-w-screen-xl items-center justify-between px-5 pt-12 pb-5 xl:py-12;
+		@apply container relative flex w-full max-w-screen-2xl items-center justify-between pt-12 pb-5 xl:py-12;
 	}
 
 	.burger {
@@ -67,7 +67,7 @@
 	}
 
 	.burger-header {
-		@apply container relative flex w-full items-center justify-between bg-white px-5 pt-12 pb-5;
+		@apply container relative flex w-full items-center justify-between bg-white pt-12 pb-5;
 	}
 
 	.burger-wrapper {

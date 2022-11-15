@@ -12,17 +12,17 @@
 
 <footer class="footer">
 	<Circle
-		class="absolute -top-[28rem] -right-[12rem] z-10 h-[676px] w-[681px] stroke-white/30 xl:h-[676px] xl:w-[681px]"
+		class="absolute -top-[28rem] -right-[30rem] z-10 h-[676px] w-[681px] stroke-white/30 xl:-top-[28rem] xl:-right-[12rem] xl:h-[676px] xl:w-[681px]"
 		footer
 	/>
 
 	<Circle
-		class="absolute -bottom-[20rem] -right-[8rem] z-10 h-[449px] w-[446px] stroke-white/30 xl:h-[676px] xl:w-[681px]"
+		class="absolute -bottom-20 -right-96 z-10 h-[449px] w-[446px] stroke-white/30 xl:-bottom-[20rem] xl:-right-[8rem] xl:h-[676px] xl:w-[681px]"
 		footer
 	/>
 
 	<Circle
-		class="absolute -bottom-[24rem] -left-[24rem] z-10 h-[676px] w-[681px] stroke-white/30 xl:h-[676px] xl:w-[681px]"
+		class="absolute -bottom-96 -left-[36rem] z-10 h-[676px] w-[681px] stroke-white/30 xl:-bottom-[24rem] xl:-left-[24rem] xl:h-[676px] xl:w-[681px]"
 		footer
 	/>
 	<div class="wrapper">
@@ -68,7 +68,7 @@
 	}
 
 	.footer .wrapper {
-		@apply container relative max-w-screen-xl;
+		@apply container relative max-w-screen-2xl;
 	}
 
 	.heading {

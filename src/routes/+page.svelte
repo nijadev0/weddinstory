@@ -51,7 +51,7 @@
 	}
 
 	.contact-wrapper {
-		@apply bottom-12 right-5 z-20 
+		@apply fixed bottom-12 right-5 z-20 
 		
 		h-max w-max rounded-full bg-white p-2.5 shadow-iconWhatsapp 
 		
