@@ -23,6 +23,7 @@
 	<Swiper
 		modules={[Navigation]}
 		slidesPerView={1}
+		grabCursor
 		breakpoints={{
 			1280: {
 				slidesPerView: 2,
