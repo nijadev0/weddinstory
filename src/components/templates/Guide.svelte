@@ -31,7 +31,7 @@
 
 <style lang="postcss">
 	.guide {
-		@apply relative flex flex-col items-start gap-5 py-12 xl:flex-row xl:gap-[50px] xl:pt-[180px] xl:pb-[132px];
+		@apply relative flex flex-col items-start gap-5 py-12 xl:flex-row xl:gap-[50px] xl:py-[132px];
 	}
 
 	.wrap {

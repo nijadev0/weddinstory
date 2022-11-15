@@ -10,6 +10,7 @@
 	import Pricing from '../components/templates/Pricing.svelte';
 
 	import Whatsapp from '$lib/icons/Whatsapp.svelte';
+
 	export let data: PageData;
 
 	let currentScrollY: number = 0;
@@ -23,24 +24,16 @@
 
 <Hero />
 
-<div transition:slide class="relative flex justify-end pb-8 xl:pt-2 xl:pb-14">
-	<div
-		class="contact-now fixed bottom-12 right-5 xl:bottom-16 xl:right-12 {currentScrollY > 300
-			? 'xl:fixed'
-			: 'xl:static'}"
-	>
+<div transition:slide class="contact">
+	<div class="contact-wrapper {currentScrollY > 300 ? 'xl:fixed' : 'xl:static'}">
 		<Whatsapp class="h-full max-h-8 w-full max-w-[2rem] ease-out xl:max-h-10 xl:max-w-[40px]" />
-		<span class="hidden whitespace-nowrap text-lg font-medium text-[#4DCB5B] xl:block">
-			WhatsApp Kami
-		</span>
+		<span class="text"> WhatsApp Kami </span>
 	</div>
-
-	<!-- {/if} -->
 </div>
 
 <Testimony data={data.carousel} />
 
-<section class="features relative flex flex-col items-start">
+<section class="features">
 	{#each data.feature as { heading, description, image }, index}
 		<Feature {heading} {description} {image} {index} />
 	{/each}
@@ -53,7 +46,27 @@
 <Pricing />
 
 <style lang="postcss">
-	.contact-now {
-		@apply z-20 h-max w-max rounded-full bg-white p-2.5 shadow-iconWhatsapp  xl:flex xl:items-center xl:gap-2 xl:px-5 xl:py-3;
+	.contact {
+		@apply relative flex justify-end pb-8 xl:pt-2 xl:pb-14;
+	}
+
+	.contact-wrapper {
+		@apply bottom-12 right-5 z-20 
+		
+		h-max w-max rounded-full bg-white p-2.5 shadow-iconWhatsapp 
+		
+		xl:bottom-16 xl:right-12 
+		
+		xl:flex xl:items-center xl:gap-2 
+		
+		xl:px-5 xl:py-3;
+	}
+
+	.contact .text {
+		@apply hidden whitespace-nowrap text-lg font-medium text-[#4DCB5B] xl:block;
+	}
+
+	.features {
+		@apply relative flex flex-col items-start;
 	}
 </style>

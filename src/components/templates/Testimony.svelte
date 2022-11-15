@@ -45,7 +45,9 @@
 
 <style lang="postcss">
 	.testimony {
-		@apply relative z-10 mb-8 flex min-h-[370px] items-center justify-center rounded-[10px] bg-[#f9f9f9] py-0 xl:mb-0 xl:min-h-[290px] xl:px-14 xl:pt-11 xl:pb-2;
+		@apply relative z-10 mb-8 flex min-h-[370px] items-center justify-center rounded-[10px] bg-[#f9f9f9] py-0 
+		
+		xl:mb-[100px] xl:mt-[64px] xl:min-h-[290px] xl:px-14 xl:pt-11 xl:pb-2;
 	}
 
 	.icon {

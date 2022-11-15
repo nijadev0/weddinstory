@@ -39,7 +39,7 @@
 
 <style lang="postcss">
 	.benefit {
-		@apply flex flex-col items-center py-12;
+		@apply flex flex-col items-center py-12 xl:mt-11;
 	}
 
 	.swiper-slide {
