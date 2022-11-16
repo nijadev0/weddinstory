@@ -60,10 +60,10 @@
 	}
 
 	.icon.right {
-		@apply -right-5;
+		@apply -right-3 xl:-right-5;
 	}
 
 	.icon.left {
-		@apply -left-5 rotate-180;
+		@apply -left-3 rotate-180 xl:-left-5;
 	}
 </style>
