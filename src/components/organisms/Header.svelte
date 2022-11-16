@@ -48,7 +48,7 @@
 		<div transition:slide={{ duration: 1000 }} class="burger-wrapper">
 			<header class="burger-header">
 				<a href="/">
-					<WeddinLogo />
+					<WeddinLogo class="h-8 w-32 cursor-pointer" />
 				</a>
 
 				<nav class="burger">
@@ -87,7 +87,7 @@
 	}
 
 	.burger-wrapper {
-		@apply fixed inset-0 z-10 h-screen w-full;
+		@apply fixed inset-0 z-50 h-screen w-full;
 	}
 
 	.burger-list {
