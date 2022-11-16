@@ -36,10 +36,10 @@
 				<div class="col-span-5 flex w-full flex-col items-start gap-5 xl:gap-14">
 					<WeddinLogo variant="secondary" class="h-[24px] w-[102px] xl:h-[52px] xl:w-[225px]" />
 
-					<Button type="link" icon href="mailto:hello@weddinstory.com">
+					<a class="flex items-center gap-2" href="mailto:hello@weddinstory.com">
 						<Mail />
 						<span class="btn icon span">hello@weddinstory.com</span>
-					</Button>
+					</a>
 
 					<Para variant="terniary" class="max-w-[290px]">
 						Jl. Sorogenen No.35, Sorosutan, Umbulharjo, Kota Yogyakarta 55162

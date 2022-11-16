@@ -14,7 +14,7 @@
 			'#hero-text',
 			{
 				y: [40, 0],
-				opacity: [0, 0.9, 1]
+				opacity: [0, 1]
 			},
 			{
 				duration: 0.5,
@@ -27,7 +27,7 @@
 			'#hero-image',
 			{
 				y: [40, 0],
-				opacity: [0, 0.9, 1]
+				opacity: [0, 1]
 			},
 			{
 				duration: 0.5,
