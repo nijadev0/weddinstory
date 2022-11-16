@@ -1,28 +1,40 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { fly } from 'svelte/transition';
-
+	import { animate, stagger } from 'motion';
 	import WeddinLogo from '../../lib/brands/WeddinLogo.svelte';
 	import Menu from '../../lib/icons/Menu.svelte';
 	import Close from '../../lib/icons/Close.svelte';
+	import { onMount } from 'svelte';
 
 	let menuShow: boolean = false;
 
 	let menuLabel = ['Beranda', 'Fitur', 'Katalog', 'Kontak'];
+
+	onMount(() => {
+		animate(
+			'#header',
+			{ y: [-40, 0] },
+			{
+				easing: 'ease-in-out',
+				duration: 0.5,
+				delay: stagger(0.2)
+			}
+		);
+	});
 </script>
 
 <header class="header">
-	<a href="/" class="logo">
+	<a id="header" href="/" class="logo">
 		<WeddinLogo class="h-8 w-32 cursor-pointer" />
 	</a>
 
-	<nav class="burger">
+	<nav id="header" class="burger">
 		<button on:click={() => (menuShow = !menuShow)}>
 			<Menu />
 		</button>
 	</nav>
 
-	<nav class="desktop-menu hidden xl:block">
+	<nav id="header" class="desktop-menu hidden xl:block">
 		<ul class="desktop-list flex items-center gap-9 text-sm text-[#121212]/60 xl:text-base">
 			{#each menuLabel as label}
 				<li class="desktop-item">

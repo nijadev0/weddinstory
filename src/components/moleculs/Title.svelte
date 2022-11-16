@@ -10,17 +10,18 @@
 	export let guide: boolean = false;
 	export let feature: boolean = false;
 	export let benefit: boolean = false;
-
+	export let id: string = '';
 	export let heading: string = '';
 	export let description: string = '';
 </script>
 
 <div class="title {variant} {position && 'center'}">
 	{#if variant === 'secondary'}
-		<Heading type="tagline" class="mb-5">Fitur Unggulan</Heading>
+		<Heading {id} type="tagline" class="mb-5">Fitur Unggulan</Heading>
 	{/if}
 
 	<Heading
+		{id}
 		type={hero ? 'main' : 'base'}
 		class="{(hero && 'mb-5 xl:mb-[44px] max-w-[605px]') ||
 			(guide && 'mb-5 xl:mb-7') ||
@@ -29,6 +30,7 @@
 		{heading}
 	</Heading>
 	<Para
+		{id}
 		size="small"
 		{hero}
 		class="mb-5 max-w-[605px] {(hero && 'mb-8 xl:mb-[60px]') ||
@@ -41,7 +43,7 @@
 	</Para>
 
 	{#if variant === 'terniary'}
-		<a href="https://instagram.com/weddinstory" class="mb-6 flex items-center gap-2 xl:mb-12">
+		<a {id} href="https://instagram.com/weddinstory" class="mb-6 flex items-center gap-2 xl:mb-12">
 			<span class="btn icon span"> Lihat Semua </span>
 			<ArrowBtn />
 		</a>

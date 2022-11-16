@@ -7,6 +7,7 @@
 
 	import 'swiper/css';
 	import 'swiper/css/navigation';
+
 	import StarRect from '$lib/icons/StarRect.svelte';
 
 	export let data: any;

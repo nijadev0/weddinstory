@@ -4,16 +4,17 @@
 	export let href: string = '';
 	export let icon: boolean = false;
 
+	export let id: string = '';
 	let className: string = '';
 	export { className as class };
 </script>
 
 {#if type === 'button'}
-	<button class="btn {variant} {className}">
+	<button {id} class="btn {variant} {className}">
 		<slot />
 	</button>
 {:else}
-	<a {href} class="btn {icon && 'icon'} {variant} {className}">
+	<a {id} {href} class="btn {icon && 'icon'} {variant} {className}">
 		<slot />
 	</a>
 {/if}

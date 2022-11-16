@@ -5,20 +5,21 @@
 	export let color: string | 'black' | 'blackPricing' | 'white' = 'black';
 	export let testimony: boolean = false;
 
+	export let id: string = '';
 	let className: string = '';
 	export { className as class };
 </script>
 
 {#if type === 'main'}
-	<h1 class="heading {variant} {size} {type} {className}">
+	<h1 {id} class="heading {variant} {size} {type} {className}">
 		<slot />
 	</h1>
 {:else if type === 'tagline'}
-	<h5 class="tagline {className}">
+	<h5 {id} class="tagline {className}">
 		<slot />
 	</h5>
 {:else}
-	<h3 class="heading {variant} {size} {testimony ? 'testimony' : ''} {color} {className}">
+	<h3 {id} class="heading {variant} {size} {testimony ? 'testimony' : ''} {color} {className}">
 		<slot />
 	</h3>
 {/if}

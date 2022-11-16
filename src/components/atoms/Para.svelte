@@ -3,11 +3,12 @@
 	export let size: string | 'large' | 'base' | 'small' = 'large';
 	export let hero: boolean = false;
 
+	export let id: string = '';
 	let className: string = '';
 	export { className as class };
 </script>
 
-<p class="para {variant} {size} {hero && 'hero'} {className}">
+<p {id} class="para {variant} {size} {hero && 'hero'} {className}">
 	<slot />
 </p>
 

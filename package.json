@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"motion": "^10.14.3",
 		"swiper": "^8.4.4"
 	}
 }
