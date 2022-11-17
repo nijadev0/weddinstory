@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
-	import { FreeMode, Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
+	import { FreeMode, Navigation } from 'swiper';
+	import { inView, animate, stagger } from 'motion';
 
 	import 'swiper/css';
 	import 'swiper/css/free-mode';
@@ -11,17 +13,36 @@
 
 	export let isBeginning: boolean = true;
 	export let isEnd: boolean = false;
+
+	onMount(() => {
+		inView('#benefit', ({ target }) => {
+			animate(
+				target.querySelectorAll('#benefitHeading'),
+				{ opacity: [0, 1], y: [40, 0] },
+				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+			);
+		});
+
+		inView('#benefitCarousel', ({ target }) => {
+			animate(
+				target.querySelectorAll('#benefitCarousel-card'),
+				{ opacity: [0, 1], y: [40, 0] },
+				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+			);
+		});
+	});
 </script>
 
-<section class="benefit">
+<section id="benefit" class="benefit">
 	<Title
+		id="benefitHeading"
 		variant="terniary"
 		heading="Lebih dari 100+ Tema Eksklusif"
 		description="Pilih berbagai tema eksklusif dari kami untuk undanganmu"
 		benefit
 	/>
 
-	<div class="relative">
+	<div class="benefit-wrapper">
 		<div id="prev" class="icon left">
 			<Arrow
 				class="h-[42px] w-[42px] fill-slate-400 xl:h-12 xl:w-12 {isBeginning === true
@@ -43,11 +64,15 @@
 				(isEnd = e.detail[0].isEnd), (isBeginning = e.detail[0].isBeginning);
 			}}
 			grabCursor
+			id="benefitCarousel"
 		>
 			{#each [1, 2, 3, 4, 5, 6] as carousel}
-				<SwiperSlide class="h-full max-h-96 w-full max-w-[24rem] rounded-[15px]">
+				<SwiperSlide
+					id="benefitCarousel-card"
+					class="h-full max-h-96 w-full max-w-[24rem] rounded-[15px]"
+				>
 					<img
-						class="rounded-[15px]"
+						class="benefitCarousel-image"
 						src="theme-illustration-{carousel}.png"
 						alt="Collection Theme Illustration {carousel}"
 					/>
@@ -67,6 +92,14 @@
 <style lang="postcss">
 	.benefit {
 		@apply relative flex max-w-screen-2xl flex-col items-center py-12 xl:mt-11;
+	}
+
+	.benefit-wrapper {
+		@apply relative;
+	}
+
+	.benefitCarousel-image {
+		@apply rounded-[15px];
 	}
 
 	.icon {

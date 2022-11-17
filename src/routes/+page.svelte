@@ -25,6 +25,7 @@
 <Hero />
 
 <div transition:slide class="contact">
+	<div />
 	<a href="https://wa.me/6281227182500">
 		<div class="contact-wrapper {currentScrollY > 300 ? 'xl:fixed' : 'xl:static'}">
 			<Whatsapp class="h-full max-h-8 w-full max-w-[2rem] ease-out xl:max-h-10 xl:max-w-[40px]" />
@@ -49,7 +50,7 @@
 
 <style lang="postcss">
 	.contact {
-		@apply relative flex justify-end pb-8 xl:pt-2 xl:pb-14;
+		@apply relative flex min-h-0 justify-end py-8 xl:py-20;
 	}
 
 	.contact-wrapper {

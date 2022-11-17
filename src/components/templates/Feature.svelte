@@ -12,9 +12,6 @@
 	export let index: number = 0;
 
 	onMount(() => {
-		// inView('#feature div', ({ target }) => {
-		// });
-
 		inView('#feature', ({ target }) => {
 			animate(
 				target.querySelectorAll('#child'),

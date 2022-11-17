@@ -1,8 +1,10 @@
 <script lang="ts">
-	import Trililili from '$lib/icons/Trililili.svelte';
+	import { onMount } from 'svelte';
 	import Button from '../atoms/Button.svelte';
 	import Card from '../moleculs/Card.svelte';
 	import Title from '../moleculs/Title.svelte';
+
+	import Trililili from '$lib/icons/Trililili.svelte';
 
 	interface Guide {
 		icon?: string;
@@ -11,9 +13,21 @@
 	}
 
 	export let data: Guide[];
+
+	import { animate, inView, stagger } from 'motion';
+
+	onMount(() => {
+		inView('#guide-animate', ({ target }) => {
+			animate(
+				target.querySelectorAll('.card'),
+				{ opacity: [0, 1], y: [40, 0] },
+				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+			);
+		});
+	});
 </script>
 
-<section class="guide">
+<section id="guide" class="guide">
 	<div class="relative flex flex-col items-start">
 		<Trililili class="absolute top-10 left-32 hidden xl:block" />
 		<Title guide heading="Cara Pemesanan" description="Hanya 3 langkah untuk membuat undangmu" />
@@ -22,7 +36,7 @@
 		</Button>
 	</div>
 
-	<div class="wrap">
+	<div id="guide-animate" class="wrap">
 		{#each data as { icon, heading, description }, index}
 			<Card {icon} {heading} {description} {index} />
 		{/each}

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { inView, animate, stagger } from 'motion';
+
 	import Title from '../moleculs/Title.svelte';
 	import Card from '../moleculs/Card.svelte';
 
@@ -31,10 +34,28 @@
 		'Konfirmasi kehadiran',
 		'Music'
 	];
+
+	onMount(() => {
+		inView('#pricing', ({ target }) => {
+			animate(
+				target.querySelectorAll('#benefitHeading'),
+				{ opacity: [0, 1], y: [40, 0] },
+				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+			);
+		});
+
+		inView('#card-pricing', ({ target }) => {
+			animate(
+				target.querySelectorAll('.card-pricing'),
+				{ opacity: [0, 1], y: [40, 0] },
+				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+			);
+		});
+	});
 </script>
 
-<section class="pricing">
-	<div class="heading-wrapper">
+<section id="pricing" class="pricing">
+	<div id="pricing-animate" class="heading-wrapper">
 		<Title
 			variant="primary"
 			position="center"
@@ -42,7 +63,7 @@
 			description="Rencanakan undangan terbaikmu bersama kami"
 		/>
 	</div>
-	<div class="card-wrapper">
+	<div id="card-pricing" class="card-wrapper">
 		{#each data as { isBest, heading, price }}
 			<Card {advantage} {isBest} {heading} {price} variant="pricing" />
 		{/each}

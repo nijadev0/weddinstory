@@ -70,7 +70,7 @@
 
 <style lang="postcss">
 	.hero {
-		@apply relative py-5 xl:grid xl:grid-cols-12 xl:items-center xl:gap-[30px] xl:py-8;
+		@apply relative py-5 xl:grid xl:grid-cols-12 xl:place-items-start xl:items-center xl:gap-[30px] xl:py-8;
 	}
 
 	.text {
