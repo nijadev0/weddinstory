@@ -16,7 +16,7 @@
 			animate(
 				target.querySelectorAll('#footerItem'),
 				{ opacity: [0, 1], y: [40, 0] },
-				{ duration: 0.75, delay: stagger(0.25), offset: [0, 1] }
+				{ duration: 0.75, delay: stagger(0.25, { start: 0.5 }), offset: [0, 1] }
 			);
 		});
 	});

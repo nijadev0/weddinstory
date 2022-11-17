@@ -4,7 +4,7 @@
 	import Circle from '$lib/icons/Circle.svelte';
 	import ArrowDown from '$lib/icons/ArrowDown.svelte';
 	import { onMount } from 'svelte';
-	import { inView, animate, stagger, scroll, ScrollOffset } from 'motion';
+	import { inView, animate, stagger } from 'motion';
 
 	export let heading: string = '';
 	export let description: string = '';
@@ -17,7 +17,7 @@
 				target.querySelectorAll('#featureAnimate'),
 				{ opacity: [0, 1], y: [40, 0] },
 				{
-					delay: stagger(0.25, { start: 0.25 }),
+					delay: stagger(0.25, { start: 0.5 }),
 					duration: 0.75,
 					easing: 'ease-in-out',
 					offset: [0, 1]

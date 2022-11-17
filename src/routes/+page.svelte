@@ -50,7 +50,7 @@
 
 <style lang="postcss">
 	.contact {
-		@apply relative flex min-h-0 justify-end py-8 xl:py-20;
+		@apply relative flex min-h-0 justify-end py-20;
 	}
 
 	.contact-wrapper {

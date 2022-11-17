@@ -40,7 +40,12 @@
 			animate(
 				target.querySelectorAll('#benefitHeading'),
 				{ opacity: [0, 1], y: [40, 0] },
-				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+				{
+					delay: stagger(0.25, { start: 0.5 }),
+					duration: 0.75,
+					easing: 'ease-in-out',
+					offset: [0, 1]
+				}
 			);
 		});
 
@@ -48,7 +53,12 @@
 			animate(
 				target.querySelectorAll('.card-pricing'),
 				{ opacity: [0, 1], y: [40, 0] },
-				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+				{
+					delay: stagger(0.25, { start: 0.5 }),
+					duration: 0.75,
+					easing: 'ease-in-out',
+					offset: [0, 1]
+				}
 			);
 		});
 	});

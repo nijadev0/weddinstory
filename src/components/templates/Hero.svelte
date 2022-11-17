@@ -18,7 +18,7 @@
 			},
 			{
 				duration: 0.5,
-				delay: stagger(0.25),
+				delay: stagger(0.25, { start: 0.5 }),
 				easing: 'ease-in-out'
 			}
 		);
