@@ -14,9 +14,14 @@
 	onMount(() => {
 		inView('#feature', ({ target }) => {
 			animate(
-				target.querySelectorAll('#child'),
+				target.querySelectorAll('#featureAnimate'),
 				{ opacity: [0, 1], y: [40, 0] },
-				{ delay: stagger(0.25), duration: 0.75, easing: 'ease-in-out', offset: [0, 1] }
+				{
+					delay: stagger(0.25, { start: 0.25 }),
+					duration: 0.75,
+					easing: 'ease-in-out',
+					offset: [0, 1]
+				}
 			);
 		});
 	});
@@ -29,7 +34,7 @@
 			: '-top-0 -right-40 xl:-top-96 xl:-right-[32rem]'}"
 	/>
 
-	<div id="child" class="text">
+	<div id="featureAnimate" class="text">
 		<div>
 			<Title id="feature-text" variant="secondary" {heading} {description} feature />
 		</div>
@@ -39,7 +44,7 @@
 		</div>
 	</div>
 
-	<div id="child" class="photo">
+	<div id="featureAnimate" class="photo">
 		<img class="image" src={image} alt={image} />
 	</div>
 </section>
