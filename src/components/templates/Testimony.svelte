@@ -10,6 +10,9 @@
 
 	import StarRect from '$lib/icons/StarRect.svelte';
 
+	export let isBeginning: boolean = true;
+	export let isEnd: boolean = false;
+
 	export let data: any;
 </script>
 
@@ -18,7 +21,11 @@
 	<StarRect class="absolute -bottom-3 -right-3 z-10 xl:-bottom-3" />
 
 	<div id="prev" class="icon left">
-		<Arrow class="h-[42px] w-[42px] xl:h-12 xl:w-12" />
+		<Arrow
+			class="h-[42px] w-[42px] xl:h-12 xl:w-12 {isBeginning === true
+				? 'fill-slate-400'
+				: 'fill-primary'}"
+		/>
 	</div>
 
 	<Swiper
@@ -32,6 +39,9 @@
 			}
 		}}
 		navigation={{ prevEl: '#prev', nextEl: '#next' }}
+		on:slideChange={(e) => {
+			(isEnd = e.detail[0].isEnd), (isBeginning = e.detail[0].isBeginning);
+		}}
 	>
 		{#each data as { thumbnail, couples, testimony, rate }}
 			<SwiperSlide>
@@ -41,7 +51,9 @@
 	</Swiper>
 
 	<div id="next" class="icon right">
-		<Arrow class="h-[42px] w-[42px] xl:h-12 xl:w-12" />
+		<Arrow
+			class="h-[42px] w-[42px] xl:h-12 xl:w-12 {isEnd === true ? 'fill-slate-400' : 'fill-primary'}"
+		/>
 	</div>
 </section>
 

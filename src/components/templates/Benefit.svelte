@@ -8,6 +8,9 @@
 
 	import Title from '../moleculs/Title.svelte';
 	import Arrow from '$lib/icons/Arrow.svelte';
+
+	export let isBeginning: boolean = true;
+	export let isEnd: boolean = false;
 </script>
 
 <section class="benefit">
@@ -20,7 +23,11 @@
 
 	<div class="relative">
 		<div id="prev" class="icon left">
-			<Arrow class="h-[42px] w-[42px] xl:h-12 xl:w-12" />
+			<Arrow
+				class="h-[42px] w-[42px] fill-slate-400 xl:h-12 xl:w-12 {isBeginning === true
+					? 'fill-slate-400'
+					: 'fill-primary'}"
+			/>
 		</div>
 
 		<Swiper
@@ -31,6 +38,9 @@
 			navigation={{
 				prevEl: '#prev',
 				nextEl: '#next'
+			}}
+			on:slideChange={(e) => {
+				(isEnd = e.detail[0].isEnd), (isBeginning = e.detail[0].isBeginning);
 			}}
 			grabCursor
 		>
@@ -45,7 +55,11 @@
 			{/each}
 		</Swiper>
 		<div id="next" class="icon right">
-			<Arrow class="h-[42px] w-[42px] xl:h-12 xl:w-12" />
+			<Arrow
+				class="h-[42px] w-[42px] xl:h-12 xl:w-12 {isEnd === true
+					? 'fill-slate-400'
+					: 'fill-primary'}"
+			/>
 		</div>
 	</div>
 </section>
