@@ -55,7 +55,7 @@
 			id="hero-text"
 			type="link"
 			href="https://wa.me/6281227182500"
-			class="w-full px-14 xl:w-max"
+			class="w-full px-14 md:w-max"
 		>
 			Buat Undangan
 		</Button>
