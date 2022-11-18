@@ -70,14 +70,14 @@
 
 <style lang="postcss">
 	.hero {
-		@apply relative py-5 xl:grid xl:grid-cols-12 xl:place-items-start xl:items-center xl:gap-[30px] xl:py-8;
+		@apply relative py-5 md:grid md:grid-cols-12 md:place-items-start md:items-center md:gap-[30px] md:py-8;
 	}
 
 	.text {
-		@apply relative mb-12 flex w-full flex-col items-start xl:col-span-6 xl:mb-0;
+		@apply relative mb-12 flex w-full flex-col items-start md:col-span-6 xl:mb-0;
 	}
 
 	.photo {
-		@apply min-h-[360px] w-full rounded-[10px] xl:col-span-6 xl:max-h-[658px];
+		@apply min-h-[360px] w-full rounded-[10px] md:col-span-6 xl:max-h-[658px];
 	}
 </style>

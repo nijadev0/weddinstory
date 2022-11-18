@@ -54,10 +54,10 @@
 
 <style lang="postcss">
 	.guide {
-		@apply relative flex flex-col items-start gap-5 py-12 xl:flex-row xl:gap-[50px] xl:py-[132px];
+		@apply relative flex w-full flex-col items-start gap-5 py-12 xl:flex-row xl:gap-[50px] xl:py-[132px];
 	}
 
 	.wrap {
-		@apply mb-6 flex flex-col items-start gap-10 xl:mb-0 xl:flex-row xl:gap-[30px];
+		@apply mb-6 flex w-full flex-col items-start gap-10 md:flex-row md:flex-wrap xl:mb-0 xl:gap-[30px];
 	}
 </style>

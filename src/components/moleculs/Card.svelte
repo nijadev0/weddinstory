@@ -76,7 +76,7 @@
 
 <style lang="postcss">
 	.card {
-		@apply flex flex-row items-start gap-5 xl:flex-col xl:gap-6;
+		@apply flex w-full flex-row items-start gap-5 xl:flex-col xl:gap-6;
 	}
 
 	.card .text {

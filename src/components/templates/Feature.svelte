@@ -51,11 +51,11 @@
 
 <style lang="postcss">
 	.feature {
-		@apply relative my-0 flex flex-col items-center gap-5 py-10 xl:my-10 xl:flex-row xl:items-center xl:justify-between xl:gap-[75px];
+		@apply relative my-0 flex flex-col items-center gap-5 py-10 md:flex-row md:items-center md:justify-between md:gap-14 xl:my-10 xl:gap-[75px];
 	}
 
 	.feature.reverse {
-		@apply xl:flex-row-reverse;
+		@apply md:flex-row-reverse;
 	}
 
 	.text {

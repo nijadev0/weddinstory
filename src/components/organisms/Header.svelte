@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { animate, stagger } from 'motion';
+	import { onMount } from 'svelte';
+
 	import WeddinLogo from '../../lib/brands/WeddinLogo.svelte';
 	import Menu from '../../lib/icons/Menu.svelte';
 	import Close from '../../lib/icons/Close.svelte';
-	import { onMount } from 'svelte';
 
 	let menuShow: boolean = false;
 
@@ -28,7 +29,7 @@
 		<WeddinLogo class="h-8 w-32 cursor-pointer" />
 	</a>
 
-	<nav id="header" class="burger">
+	<nav id="header" class="mobile">
 		<button on:click={() => (menuShow = !menuShow)}>
 			<Menu />
 		</button>
@@ -45,26 +46,26 @@
 	</nav>
 
 	{#if menuShow}
-		<div transition:slide={{ duration: 1000 }} class="burger-wrapper">
-			<header class="burger-header">
+		<div transition:slide={{ duration: 1000 }} class="mobile-wrapper">
+			<header class="mobile-header">
 				<a href="/">
 					<WeddinLogo class="h-8 w-32 cursor-pointer" />
 				</a>
 
-				<nav class="burger">
+				<nav class="mobile">
 					<button on:click={() => (menuShow = !menuShow)}>
 						<Close />
 					</button>
 				</nav>
 			</header>
-			<ul class="burger-list">
+			<ul class="mobile-list">
 				{#each menuLabel as label}
-					<li class="burger-item">
-						<a class="burger-link" href="/{label.toLowerCase()}">{label}</a>
+					<li class="mobile-item">
+						<a class="mobile-link" href="/{label.toLowerCase()}">{label}</a>
 					</li>
 				{/each}
 			</ul>
-			<div class="burger-overlay" />
+			<div class="mobile-overlay" />
 		</div>
 	{/if}
 </header>
@@ -78,31 +79,31 @@
 		@apply cursor-pointer;
 	}
 
-	.burger {
+	.mobile {
 		@apply block xl:hidden;
 	}
 
-	.burger-header {
+	.mobile-header {
 		@apply container relative flex w-full items-center justify-between bg-white pt-12 pb-5;
 	}
 
-	.burger-wrapper {
+	.mobile-wrapper {
 		@apply fixed inset-0 z-50 h-screen w-full;
 	}
 
-	.burger-list {
+	.mobile-list {
 		@apply w-full bg-white px-5;
 	}
 
-	.burger-item {
-		@apply border-b border-black/5 pt-6 pb-5;
+	.mobile-item {
+		@apply container border-b border-black/5 pt-6 pb-5;
 	}
 
-	.burger-link {
+	.mobile-link {
 		@apply text-lg text-[#121212]/60;
 	}
 
-	.burger-overlay {
+	.mobile-overlay {
 		@apply h-full w-full bg-[#121212]/20;
 	}
 

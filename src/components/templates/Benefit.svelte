@@ -62,10 +62,19 @@
 		</div>
 
 		<Swiper
-			freeMode={true}
+			modules={[Navigation, FreeMode]}
 			slidesPerView="auto"
-			spaceBetween={20}
-			modules={[FreeMode, Navigation]}
+			grabCursor
+			breakpoints={{
+				768: {
+					slidesPerView: 'auto',
+					spaceBetween: 20
+				},
+				1280: {
+					slidesPerView: 'auto',
+					spaceBetween: 30
+				}
+			}}
 			navigation={{
 				prevEl: '#prev',
 				nextEl: '#next'
@@ -73,7 +82,6 @@
 			on:slideChange={(e) => {
 				(isEnd = e.detail[0].isEnd), (isBeginning = e.detail[0].isBeginning);
 			}}
-			grabCursor
 			id="benefitCarousel"
 		>
 			{#each [1, 2, 3, 4, 5, 6] as carousel}
