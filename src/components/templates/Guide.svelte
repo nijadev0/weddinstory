@@ -58,6 +58,6 @@
 	}
 
 	.wrap {
-		@apply mb-6 flex w-full flex-col items-start gap-10 md:flex-row md:flex-wrap xl:mb-0 xl:gap-[30px];
+		@apply mb-6 flex w-full flex-col items-start gap-10 md:flex-row md:flex-wrap lg:flex-nowrap xl:mb-0 xl:gap-[30px];
 	}
 </style>

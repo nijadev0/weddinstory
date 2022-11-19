@@ -96,7 +96,7 @@
 	}
 
 	.mobile-item {
-		@apply container border-b border-black/5 pt-6 pb-5;
+		@apply border-b border-black/5 pt-6 pb-5 sm:container;
 	}
 
 	.mobile-link {
