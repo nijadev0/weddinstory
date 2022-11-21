@@ -1,20 +1,19 @@
 <script lang="ts">
-	import Arrow from '$lib/icons/Arrow.svelte';
-	import Carousel from '../moleculs/Carousel.svelte';
-
+	import { onMount } from 'svelte';
+	import { inView, animate, stagger } from 'motion';
 	import { Navigation } from 'swiper';
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 
 	import 'swiper/css';
 	import 'swiper/css/navigation';
 
-	import StarRect from '$lib/icons/StarRect.svelte';
-	import { onMount } from 'svelte';
-	import { inView, animate, stagger } from 'motion';
+	import Carousel from '$moleculs/Carousel.svelte';
+
+	import Arrow from '$icons/Arrow.svelte';
+	import StarRect from '$icons/StarRect.svelte';
 
 	export let isBeginning: boolean = true;
 	export let isEnd: boolean = false;
-
 	export let data: any;
 
 	onMount(() => {

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Heading from '../../components/atoms/Heading.svelte';
-	import Para from '../../components/atoms/Para.svelte';
+	import Heading from '$atoms/Heading.svelte';
+	import Para from '$atoms/Para.svelte';
 
-	import ArrowBtn from '$lib/icons/ArrowBtn.svelte';
+	import ArrowBtn from '$icons/ArrowBtn.svelte';
 
 	export let variant: string | 'primary' | 'secondary' | 'terniary' = 'primary';
 	export let position: string | 'center' = '';

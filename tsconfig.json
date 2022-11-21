@@ -8,7 +8,17 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"paths": {
+			"$atoms/*": ["src/components/atoms/*"],
+			"$moleculs/*": ["src/components/moleculs/*"],
+			"$organisms/*": ["src/components/organisms/*"],
+			"$templates/*": ["src/components/templates/*"],
+			"$brands/*": ["src/lib/brands/*"],
+			"$icons/*": ["src/lib/icons/*"],
+			"$images/*": ["src/lib/images/*"],
+			"$utilities/*": ["src/utilities/*"]
+		}
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

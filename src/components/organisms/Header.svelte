@@ -3,9 +3,9 @@
 	import { animate, stagger } from 'motion';
 	import { onMount } from 'svelte';
 
-	import WeddinLogo from '../../lib/brands/WeddinLogo.svelte';
-	import Menu from '../../lib/icons/Menu.svelte';
-	import Close from '../../lib/icons/Close.svelte';
+	import WeddinLogo from '$brands/WeddinLogo.svelte';
+	import Menu from '$icons/Menu.svelte';
+	import Close from '$icons/Close.svelte';
 
 	let menuShow: boolean = false;
 

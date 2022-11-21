@@ -1,10 +1,12 @@
 <script lang="ts">
-	import Heading from '../atoms/Heading.svelte';
-	import Para from '../atoms/Para.svelte';
-	import Check from '$lib/icons/Check.svelte';
-	import { numberWithCommas } from '../../utilities/formatCurrency';
-	import Button from '../atoms/Button.svelte';
-	import BestSeller from '$lib/icons/BestSeller.svelte';
+	import Heading from '$atoms/Heading.svelte';
+	import Para from '$atoms/Para.svelte';
+	import Button from '$atoms/Button.svelte';
+
+	import Check from '$icons/Check.svelte';
+	import BestSeller from '$icons/BestSeller.svelte';
+
+	import { numberWithCommas } from '$utilities/formatCurrency';
 
 	export let variant: string | 'pricing' | 'base' = 'base';
 

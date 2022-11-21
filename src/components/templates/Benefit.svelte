@@ -8,8 +8,8 @@
 	import 'swiper/css/free-mode';
 	import 'swiper/css/navigation';
 
-	import Title from '../moleculs/Title.svelte';
-	import Arrow from '$lib/icons/Arrow.svelte';
+	import Title from '$moleculs/Title.svelte';
+	import Arrow from '$icons/Arrow.svelte';
 
 	export let isBeginning: boolean = true;
 	export let isEnd: boolean = false;

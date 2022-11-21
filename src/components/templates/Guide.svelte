@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Button from '../atoms/Button.svelte';
-	import Card from '../moleculs/Card.svelte';
-	import Title from '../moleculs/Title.svelte';
 
-	import Trililili from '$lib/icons/Trililili.svelte';
+	import Button from '$atoms/Button.svelte';
+	import Title from '$moleculs/Title.svelte';
+	import Card from '$moleculs/Card.svelte';
+
+	import Trililili from '$icons/Trililili.svelte';
 
 	interface Guide {
 		icon?: string;

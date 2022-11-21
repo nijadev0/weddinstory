@@ -1,10 +1,11 @@
 <script lang="ts">
-	import Title from '../moleculs/Title.svelte';
-
-	import Circle from '$lib/icons/Circle.svelte';
-	import ArrowDown from '$lib/icons/ArrowDown.svelte';
 	import { onMount } from 'svelte';
 	import { inView, animate, stagger } from 'motion';
+
+	import Title from '$moleculs/Title.svelte';
+
+	import Circle from '$icons/Circle.svelte';
+	import ArrowDown from '$icons/ArrowDown.svelte';
 
 	export let heading: string = '';
 	export let description: string = '';
