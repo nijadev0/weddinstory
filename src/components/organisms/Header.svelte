@@ -1,7 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import { animate, stagger } from 'motion';
-	import { onMount } from 'svelte';
 
 	import WeddinLogo from '$lib/brands/WeddinLogo.svelte';
 	import Menu from '$lib/icons/Menu.svelte';
@@ -9,14 +9,14 @@
 
 	let menuShow: boolean = false;
 
-	let menuLabel = ['Beranda', 'Fitur', 'Katalog', 'Kontak'];
+	export let data: string[] = [''];
 
 	onMount(() => {
 		animate(
 			'#header',
 			{ y: [-40, 0] },
 			{
-				easing: 'ease-in-out',
+				easing: 'linear',
 				duration: 0.5,
 				delay: stagger(0.2)
 			}
@@ -37,7 +37,7 @@
 
 	<nav id="header" class="desktop-menu hidden xl:block">
 		<ul class="desktop-list flex items-center gap-9 text-sm text-[#121212]/60 xl:text-base">
-			{#each menuLabel as label}
+			{#each data as label}
 				<li class="desktop-item">
 					<a href="/" class="desktop-link"> {label} </a>
 				</li>
@@ -59,7 +59,7 @@
 				</nav>
 			</header>
 			<ul class="mobile-list">
-				{#each menuLabel as label}
+				{#each data as label}
 					<li class="mobile-item">
 						<a class="mobile-link" href="/{label.toLowerCase()}">{label}</a>
 					</li>
@@ -112,6 +112,6 @@
 	}
 
 	.desktop-link {
-		@apply before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-colors before:duration-700 before:ease-in-out hover:before:bg-primary;
+		@apply before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-colors before:duration-700 before:ease-linear hover:before:bg-primary;
 	}
 </style>

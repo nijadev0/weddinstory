@@ -25,7 +25,7 @@
 				{
 					delay: stagger(0.25, { start: 0.5 }),
 					duration: 0.75,
-					easing: 'ease-in-out',
+					easing: 'linear',
 					offset: [0, 1]
 				}
 			);

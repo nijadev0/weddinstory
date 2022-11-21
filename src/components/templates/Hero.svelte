@@ -19,7 +19,7 @@
 			{
 				duration: 0.5,
 				delay: stagger(0.25, { start: 0.5 }),
-				easing: 'ease-in-out'
+				easing: 'linear'
 			}
 		);
 
@@ -32,7 +32,7 @@
 			{
 				duration: 0.5,
 				delay: 0.5,
-				easing: 'ease-in-out'
+				easing: 'linear'
 			}
 		);
 	});

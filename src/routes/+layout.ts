@@ -1,5 +1,6 @@
 export const load = () => {
 	return {
+		header: ['Beranda', 'Fitur', 'Katalog', 'Kontak'],
 		footer: [
 			{
 				heading: 'Pages',
