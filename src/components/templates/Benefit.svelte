@@ -8,8 +8,8 @@
 	import 'swiper/css/free-mode';
 	import 'swiper/css/navigation';
 
-	import Title from '$moleculs/Title.svelte';
-	import Arrow from '$icons/Arrow.svelte';
+	import Title from '$components/moleculs/Title.svelte';
+	import Arrow from '$lib/icons/Arrow.svelte';
 
 	export let isBeginning: boolean = true;
 	export let isEnd: boolean = false;
@@ -53,7 +53,7 @@
 	/>
 
 	<div class="benefit-wrapper">
-		<div id="prev" class="icon left">
+		<div id="prevBenefit" class="icon left">
 			<Arrow
 				class="h-[42px] w-[42px] fill-slate-400 xl:h-12 xl:w-12 {isBeginning === true
 					? 'fill-slate-400'
@@ -76,8 +76,8 @@
 				}
 			}}
 			navigation={{
-				prevEl: '#prev',
-				nextEl: '#next'
+				prevEl: '#prevBenefit',
+				nextEl: '#nextBenefit'
 			}}
 			on:slideChange={(e) => {
 				(isEnd = e.detail[0].isEnd), (isBeginning = e.detail[0].isBeginning);
@@ -97,7 +97,7 @@
 				</SwiperSlide>
 			{/each}
 		</Swiper>
-		<div id="next" class="icon right">
+		<div id="nextBenefit" class="icon right">
 			<Arrow
 				class="h-[42px] w-[42px] xl:h-12 xl:w-12 {isEnd === true
 					? 'fill-slate-400'

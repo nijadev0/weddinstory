@@ -7,10 +7,10 @@
 	import 'swiper/css';
 	import 'swiper/css/navigation';
 
-	import Carousel from '$moleculs/Carousel.svelte';
+	import Carousel from '$components/moleculs/Carousel.svelte';
 
-	import Arrow from '$icons/Arrow.svelte';
-	import StarRect from '$icons/StarRect.svelte';
+	import Arrow from '$lib/icons/Arrow.svelte';
+	import StarRect from '$lib/icons/StarRect.svelte';
 
 	export let isBeginning: boolean = true;
 	export let isEnd: boolean = false;
@@ -40,7 +40,7 @@
 	<StarRect class="absolute -top-3 -left-3 z-10 xl:-top-3" />
 	<StarRect class="absolute -bottom-3 -right-3 z-10 xl:-bottom-3" />
 
-	<div id="prev testimonyItem" class="icon left">
+	<div id="prevTestimony" class="icon left">
 		<Arrow
 			class="h-[42px] w-[42px] xl:h-12 xl:w-12 {isBeginning === true
 				? 'fill-slate-400'
@@ -62,7 +62,7 @@
 				spaceBetween: 30
 			}
 		}}
-		navigation={{ prevEl: '#prev', nextEl: '#next' }}
+		navigation={{ prevEl: '#prevTestimony', nextEl: '#nextTestimony' }}
 		on:slideChange={(e) => {
 			(isEnd = e.detail[0].isEnd), (isBeginning = e.detail[0].isBeginning);
 		}}
@@ -74,7 +74,7 @@
 		{/each}
 	</Swiper>
 
-	<div id="next testimonyItem" class="icon right">
+	<div id="nextTestimony" class="icon right">
 		<Arrow
 			class="h-[42px] w-[42px] xl:h-12 xl:w-12 {isEnd === true ? 'fill-slate-400' : 'fill-primary'}"
 		/>

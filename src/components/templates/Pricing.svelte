@@ -2,8 +2,8 @@
 	import { onMount } from 'svelte';
 	import { inView, animate, stagger } from 'motion';
 
-	import Title from '$moleculs/Title.svelte';
-	import Card from '$moleculs/Card.svelte';
+	import Title from '$components/moleculs/Title.svelte';
+	import Card from '$components/moleculs/Card.svelte';
 
 	let data = [
 		{

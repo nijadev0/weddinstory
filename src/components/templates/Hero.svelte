@@ -2,12 +2,12 @@
 	import { onMount } from 'svelte';
 	import { animate, stagger } from 'motion';
 
-	import Button from '$atoms/Button.svelte';
-	import Title from '$moleculs/Title.svelte';
+	import Button from '$components/atoms/Button.svelte';
+	import Title from '$components/moleculs/Title.svelte';
 
-	import HeroPhoto from '$images/hero-photo.png';
-	import Circle from '$icons/Circle.svelte';
-	import Tralalala from '$icons/Tralalala.svelte';
+	import HeroPhoto from '$lib/images/hero-photo.png';
+	import Circle from '$lib/icons/Circle.svelte';
+	import Tralalala from '$lib/icons/Tralalala.svelte';
 
 	onMount(() => {
 		animate(

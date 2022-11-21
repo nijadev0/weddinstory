@@ -2,12 +2,12 @@
 	import { onMount } from 'svelte';
 	import { animate, stagger, inView } from 'motion';
 
-	import Heading from '$atoms/Heading.svelte';
-	import Para from '$atoms/Para.svelte';
+	import Heading from '$components/atoms/Heading.svelte';
+	import Para from '$components/atoms/Para.svelte';
 
-	import WeddinLogo from '$brands/WeddinLogo.svelte';
-	import Mail from '$icons/Mail.svelte';
-	import Circle from '$icons/Circle.svelte';
+	import WeddinLogo from '$lib/brands/WeddinLogo.svelte';
+	import Mail from '$lib/icons/Mail.svelte';
+	import Circle from '$lib/icons/Circle.svelte';
 
 	export let data: any;
 

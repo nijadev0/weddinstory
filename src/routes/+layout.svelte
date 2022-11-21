@@ -2,8 +2,8 @@
 	import '../app.css';
 	import type { PageData } from './$types';
 
-	import Header from '$organisms/Header.svelte';
-	import Footer from '$organisms/Footer.svelte';
+	import Header from '../components/organisms/Header.svelte';
+	import Footer from '../components/organisms/Footer.svelte';
 
 	export let data: PageData;
 </script>

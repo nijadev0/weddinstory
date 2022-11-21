@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Heading from '$atoms/Heading.svelte';
-	import Para from '$atoms/Para.svelte';
-	import Button from '$atoms/Button.svelte';
+	import Heading from '$components/atoms/Heading.svelte';
+	import Para from '$components/atoms/Para.svelte';
+	import Button from '$components/atoms/Button.svelte';
 
-	import Check from '$icons/Check.svelte';
-	import BestSeller from '$icons/BestSeller.svelte';
+	import Check from '$lib/icons/Check.svelte';
+	import BestSeller from '$lib/icons/BestSeller.svelte';
 
 	import { numberWithCommas } from '$utilities/formatCurrency';
 

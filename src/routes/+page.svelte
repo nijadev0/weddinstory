@@ -2,14 +2,14 @@
 	import { slide } from 'svelte/transition';
 	import type { PageData } from './$types';
 
-	import Hero from '$templates/Hero.svelte';
-	import Testimony from '$templates/Testimony.svelte';
-	import Feature from '$templates/Feature.svelte';
-	import Benefit from '$templates/Benefit.svelte';
-	import Guide from '$templates/Guide.svelte';
-	import Pricing from '$templates/Pricing.svelte';
+	import Hero from '$components/templates/Hero.svelte';
+	import Testimony from '$components/templates/Testimony.svelte';
+	import Feature from '$components/templates/Feature.svelte';
+	import Benefit from '$components/templates/Benefit.svelte';
+	import Guide from '$components/templates/Guide.svelte';
+	import Pricing from '$components/templates/Pricing.svelte';
 
-	import Whatsapp from '$icons/Whatsapp.svelte';
+	import Whatsapp from '$lib/icons/Whatsapp.svelte';
 
 	export let data: PageData;
 

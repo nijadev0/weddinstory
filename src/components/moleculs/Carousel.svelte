@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Star from '$icons/Star.svelte';
+	import Star from '$lib/icons/Star.svelte';
 
-	import Heading from '$atoms/Heading.svelte';
-	import Para from '$atoms/Para.svelte';
+	import Heading from '$components/atoms/Heading.svelte';
+	import Para from '$components/atoms/Para.svelte';
 
 	export let thumbnail: string = '';
 	export let couples: string = '';

@@ -9,18 +9,15 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
+		"importsNotUsedAsValues": "error",
+		"baseUrl": ".",
 		"paths": {
-			"$atoms/*": ["src/components/atoms/*"],
-			"$moleculs/*": ["src/components/moleculs/*"],
-			"$organisms/*": ["src/components/organisms/*"],
-			"$templates/*": ["src/components/templates/*"],
 			"$lib/*": ["src/lib/*"],
-			"$brands/*": ["src/lib/brands/*"],
-			"$icons/*": ["src/lib/icons/*"],
-			"$images/*": ["src/lib/images/*"],
+			"$components/*": ["src/components/*"],
 			"$utilities/*": ["src/utilities/*"]
 		}
-	}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
