@@ -14,6 +14,7 @@
 			"$moleculs/*": ["src/components/moleculs/*"],
 			"$organisms/*": ["src/components/organisms/*"],
 			"$templates/*": ["src/components/templates/*"],
+			"$lib/*": ["src/lib/*"],
 			"$brands/*": ["src/lib/brands/*"],
 			"$icons/*": ["src/lib/icons/*"],
 			"$images/*": ["src/lib/images/*"],
